@@ -1,0 +1,35 @@
+loginPage:
+  - title: 登录成功
+    des: 密码正确
+    cases:
+      - name: 打开登录页面
+        method: goto
+        url: https://ics.chinasoftinc.com/SignOnServlet
+      - name: 输入用户名
+        method: fill
+        selector: xpath=//input[@name='userName']
+        value: "43055"
+      - name: 输入密码
+        method: fill
+        selector: xpath=//input[@id='password']
+        value: "Yxj.01200304"
+      - name: 点击登录按钮
+        method: click
+        selector: xpath=//input[@type='button']
+  - title: 登录失败
+    des: 密码错误
+    cases:
+      - name: 打开登录页面
+        method: goto
+        url: https://ics.chinasoftinc.com/SignOnServlet
+      - name: 输入用户名
+        method: fill
+        selector: xpath=//input[@name='userName']
+        value: "43055"
+      - name: 输入密码
+        method: fill
+        selector: xpath=//input[@id='password']
+        value: "Yxj.012003"
+      - name: 点击登录按钮
+        method: click
+        selector: xpath=//input[@type='button']
